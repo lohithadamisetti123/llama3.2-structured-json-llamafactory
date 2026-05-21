@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# LLaMA-Factory outputs
+checkpoints/
+runs/
+logs/
+output/
+models/
+*.bin
+*.safetensors
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
