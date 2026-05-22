@@ -1,0 +1,21 @@
+filename,raw_output_first_50_chars,is_valid_json,has_all_required_keys,key_accuracy,value_accuracy,notes
+EVAL-001,Here is the extracted data in JSON format:,False,False,0.00,0.00,Prose preamble + markdown code fences + trailing explanation
+EVAL-002,"{""vendor"": ""GreenValley Farms Ltd."", ""invoice",True,True,1.00,1.00,Clean JSON output with all keys correct
+EVAL-003,"```json\n{""vendor_name"": ""Sakura Tech Co.",False,False,0.33,0.60,Markdown fences + wrong key names (vendor_name; invoice_id; sub_total; items)
+EVAL-004,"Based on the invoice, here are the extracted",False,False,0.00,0.00,Prose preamble makes JSON unparseable
+EVAL-005,"{""vendor"": ""ClearView Optics"", ""invoice_nu",True,True,1.00,0.90,Valid JSON; subtotal equals total (no separate computation)
+EVAL-006,Here's the JSON extraction:,False,False,0.00,0.00,Prose preamble + markdown code fences
+EVAL-007,"{""vendor"": ""BlueStar Cleaning Services"", """,True,True,1.00,1.00,Clean valid JSON with all correct keys and values
+EVAL-008,I'll extract the invoice fields for you:,False,False,0.00,0.00,Prose preamble + trailing note + wrong date format
+EVAL-009,"```json\n{""vendor"": ""Pinnacle IT Solutions""",False,True,1.00,0.95,Markdown fences only — JSON content is correct inside
+EVAL-010,"{""vendor"":""Atlas Building Materials"",""inv",True,True,1.00,1.00,Clean compact JSON with all keys correct
+EVAL-011,"Sure! Here is the extracted JSON:\n{""vendor",False,False,0.78,0.85,Prose preamble + missing due_date and tax keys
+EVAL-012,"```json\n{""vendor"": ""QUANTUM RESEARCH LABS""",False,True,1.00,1.00,Markdown fences only — JSON correct inside
+EVAL-013,"{""vendor"": ""SunCoast Catering Co."", ""inv",True,True,1.00,0.95,Valid JSON with all keys present
+EVAL-014,"Let me extract the relevant fields:\n**Invo",False,False,0.33,0.50,Prose + bold markdown + completely wrong key names
+EVAL-015,"Here is the JSON:\n{""vendor"": ""SwiftLogisti",False,False,0.78,0.70,Prose preamble + due_date is string not null + tax is string not null
+EVAL-016,"```json\n{""buyer"": ""Tata Motors Limited""",False,True,1.00,1.00,Markdown fences only — PO JSON content correct
+EVAL-017,"{""buyer"": ""Samsung Electronics Co."", ""su",True,True,1.00,1.00,Clean valid JSON with all PO keys correct
+EVAL-018,"Based on the purchase order document, I've e",False,False,0.13,0.40,Prose + all key names wrong (purchaser; order_number; etc.)
+EVAL-019,"{""buyer"": ""Toyota Motor Corporation"", ""su",True,True,1.00,1.00,Clean valid JSON with all PO keys correct
+EVAL-020,"Here are the extracted purchase order fields",False,True,1.00,0.95,Prose preamble + markdown fences — JSON content correct

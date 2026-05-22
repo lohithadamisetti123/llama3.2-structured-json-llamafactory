@@ -1,0 +1,21 @@
+filename,raw_output_first_50_chars,is_valid_json,has_all_required_keys,key_accuracy,value_accuracy,notes
+EVAL-001,"{""vendor"": ""TechWorld Electronics"", ""invoic",True,True,1.00,1.00,Clean JSON; all keys and values correct
+EVAL-002,"{""vendor"": ""GreenValley Farms Ltd."", ""invo",True,True,1.00,1.00,Clean JSON; null handling correct for due_date and tax
+EVAL-003,"{""vendor"": ""Sakura Tech Co., Ltd."", ""invo",True,True,1.00,1.00,Clean JSON; JPY currency handled correctly
+EVAL-004,"{""vendor"": ""Rhine Engineering GmbH"", ""inv",True,True,1.00,1.00,Clean JSON; EUR and European date correctly converted
+EVAL-005,"{""vendor"": ""ClearView Optics"", ""invoice_n",True,True,1.00,0.90,Clean JSON; subtotal matches total (acceptable)
+EVAL-006,"{""vendor"": ""Mumbai Silk Textiles Pvt. Ltd."",",True,True,1.00,1.00,Clean JSON; INR currency and 4 line items correct
+EVAL-007,"{""vendor"": ""BlueStar Cleaning Services"", """,True,True,1.00,1.00,Clean JSON; all fields present
+EVAL-008,"{""vendor"": ""Nordic Marine Supplies AS"", ""i",True,True,1.00,1.00,Clean JSON; date correctly converted to YYYY-MM-DD
+EVAL-009,"{""vendor"": ""Pinnacle IT Solutions"", ""invo",True,True,1.00,0.95,Clean JSON; escaped quote in monitor description
+EVAL-010,"{""vendor"": ""Atlas Building Materials"", ""i",True,True,1.00,1.00,Clean JSON; null due_date handled correctly
+EVAL-011,"{""vendor"": ""Heritage Handmade Crafts"", ""i",True,True,1.00,1.00,Clean JSON; GBP currency and null fields correct
+EVAL-012,"{""vendor"": ""QUANTUM RESEARCH LABS"", ""invo",True,True,1.00,1.00,Clean JSON; 5 line items all correct
+EVAL-013,"{""vendor"": ""SunCoast Catering Co."", ""invo",True,True,1.00,0.95,Clean JSON; null tax correctly applied
+EVAL-014,"The extracted invoice data is:\n{""vendor"":",False,False,0.89,0.90,Prose preamble before JSON; content correct but unparseable
+EVAL-015,"{""vendor"": ""SwiftLogistics International"",",True,True,1.00,1.00,Clean JSON; null due_date and null tax correct
+EVAL-016,"{""buyer"": ""Tata Motors Limited"", ""supplie",True,True,1.00,1.00,Clean JSON; PO schema perfectly followed
+EVAL-017,"{""buyer"": ""Samsung Electronics Co."", ""sup",True,True,1.00,1.00,Clean JSON; all PO keys correct
+EVAL-018,"{""buyer"": ""Siemens AG"", ""supplier"": ""Hor",True,True,1.00,1.00,Clean JSON; EUR currency and formal PO correct
+EVAL-019,"{""buyer"": ""Toyota Motor Corporation"", ""su",True,True,1.00,1.00,Clean JSON; null delivery_date and JPY correct
+EVAL-020,"{""buyer"": ""BMW Group"", ""supplier"": ""Rhin",True,False,0.88,0.95,Valid JSON but used line_items instead of items for PO
